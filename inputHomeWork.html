@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleInputHomeWork.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="firstInput">
+            <form method="post" action="/login">
+                <label>
+                    <span> ВВедите логин</span>
+                    <input type="text" placeholder="Введите Ваш логин" >
+                </label>
+                <label>
+                    <span> ВВедите пароль</span>
+                    <input type="password" placeholder="Введите Ваш пароль" >
+                </label>    
+                <button type="submit">Отправить</button>
+            </form>   
+        </div>
+        <div class="secondInput">
+            <form method="post" action="/login" onsubmit="return checkPass()">
+                <label>
+                    <span> ВВедите логин</span>
+                    <input type="text" placeholder="Введите Ваш логин" >
+                </label>
+                <label>
+                    <span> Введите Вашу почту</span>
+                    <input type="email"  name="email" placeholder="Введите почту" required >
+                </label>
+                <label>
+                    <span> ВВедите пароль</span>
+                    <input type="password" id="pass" placeholder="Введите Ваш пароль" >
+                </label>    
+                <label>
+                    <span> Повторите пароль</span>
+                    <input type="password" id="passch" placeholder="Введите Ваш пароль" >
+                </label> 
+                <span> Выберите язык</span>
+                <select name="select-one-of">
+                    <option>Русский</option>
+                    <option>English</option>
+                    <option>Srpsky</option>
+                </select> 
+                <button type="submit">Отправить</button>
+                
+            </form>    
+        </div>
+    </div>
+   
+
+    <script>
+        function checkPass() {
+        if (document.getElementById('pass').value != document.getElementById('passch').value) {
+            alert('Пароли не совпадают')
+            return false;
+          } else return true;
+        }   
+    </script>
+</body>
+</html>
