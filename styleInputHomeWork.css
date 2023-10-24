@@ -1,25 +1,25 @@
 input {
-    display: block;
+    display: flex;
     margin-bottom: 12px;
     padding: 0;
+
 }
-.firstInput {
-    border: solid 1px black;
-    background-color: rgb(207, 187, 225);
-    padding: 5px;
-}
+
 ::placeholder{
     background-color: rgb(188, 241, 232);
 }
 .secondInput {
+    display: flex;
+    justify-content: center;
     background-color: rgb(174, 241, 186);
     padding: 5px;
     border: solid 1px black;
+    width: 100%;
+
 }
 .container {
-    display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 2em;
+    display: flex;
+    justify-content: center;
 }
 
 span {
@@ -27,10 +27,56 @@ span {
     font-family: "Lobster";
 }
 select {
-    width: 90%;
+    width: 100%;
+    background-color: rgb(188, 241, 232);
 }
 button {
     margin: 5px;
     padding: 5px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media only screen and (min-width: 540px) {
+    select {
+        width: 30%;
+        margin-left: 6px;
+       
+    }
+    input {
+        display:inline;
+       
+    }
+    span {
+        text-align: start;
+    }
+    form {
+        text-align: start;
+    }
+    button {
+        background-color: rgba(183, 183, 245, 0.509);
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    form {
+        flex-direction: row;
+    }
+    select {
+        border-radius: 8px;
+        width: 130px;
+        background-color: white;
+    }
+    ::placeholder{
+        background-color: white;
+        padding: 3px;
+    }
+   input {
+    border-radius: 7px;
+   }
+}
