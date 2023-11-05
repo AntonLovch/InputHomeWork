@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HomeWorkProductStar</title>
+    <link rel="shortcut icon" href="./icons8-краб-32.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./styleInputHomeWork.css" />
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster&display=swap" rel="stylesheet">
 
@@ -14,30 +15,31 @@
             <form method="post" action="/login" onsubmit="return checkPass()">
                 <label>
                     <span> ВВедите логин </span>
-                    <input type="text" placeholder="Введите Ваш логин" >
+                    <input class="login-input"  type="text" placeholder="Введите Ваш логин" >
                 </label>
                 <label>
                     <span> Введите Вашу почту</span>
-                    <input type="email"  name="email" placeholder="Введите почту" required >
+                    <input class="login-input" type="email"  name="email" placeholder="Введите почту" required >
                 </label>
                 <label>
                     <span> ВВедите пароль</span>
-                    <input type="password" id="pass" placeholder="Введите Ваш пароль" >
+                    <input class="login-input" type="password" id="pass" placeholder="Введите Ваш пароль" >
                 </label>    
                 <label>
                     <span> Повторите пароль</span>
-                    <input type="password" id="passch" placeholder="Введите Ваш пароль" >
+                    <input class="login-input" type="password" id="passch" placeholder="Введите Ваш пароль" >
                 </label> 
                 <span> Выберите язык</span>
-                <select name="select-one-of">
+                <select class="login-input" name="select-one-of">
                     <option>Русский</option>
                     <option>English</option>
                     <option>Srpsky</option>
                 </select> 
-                <button type="submit">Отправить</button>
-                
-            </form>    
-        </div>
+                <button class="button-style" type="submit">Отправить</button>
+            </form> 
+            <img class="ball" src="./football-64x64 (1).png" />  
+        </div> 
+       
     </div>
    
 

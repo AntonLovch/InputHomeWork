@@ -4,17 +4,24 @@ input {
     padding: 0;
 
 }
-
-::placeholder{
-    background-color: rgb(188, 241, 232);
+.login-input{
+    background: rgba(150, 250, 219, 0.982);
+    transition: background 0.5s ease-out;
 }
+.login-input:focus {
+    background:rgba(239, 136, 157, 0.845) ;
+}
+/*::placeholder{
+    background-color: rgb(188, 241, 232);
+}*/
 .secondInput {
     display: flex;
-    justify-content: center;
+    align-items: center;
     background-color: rgb(174, 241, 186);
     padding: 5px;
     border: solid 1px black;
     width: 100%;
+    flex-direction: column;
 
 }
 .container {
@@ -33,12 +40,60 @@ select {
 button {
     margin: 5px;
     padding: 5px;
+    transition: all 0.5s ease-out;
+}
+.button-style:hover,
+.button-style:focus {
+background: rgb(237, 141, 141);
+transform: scale(1.15);
 }
 
 form {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+.ball {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    bottom: 0%;
+    left: 0;
+    animation: fly 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fly {
+   0% {
+     left: -45%;
+    }
+    10% {
+        left: -35%;
+        bottom: 20% ;
+    }
+    20% {
+        left: -20%;
+        bottom: 0%;
+    }
+    30% {
+        left: -10%;
+        bottom: 10% ;
+    }
+    40% {
+        left: 0%;
+        bottom: 0%; 
+    }
+    50% {
+        left: 10%;
+        bottom: 5% ;
+    }
+    60% {
+        left: 20%;
+        bottom: 0%; 
+    }
+    100% {
+     left: 45%;
+    }
 }
 
 @media only screen and (min-width: 540px) {
@@ -73,7 +128,7 @@ form {
         background-color: white;
     }
     ::placeholder{
-        background-color: white;
+        
         padding: 3px;
     }
    input {
